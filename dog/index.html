@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>강아지 소개</title>
+<meta name="description" content="많이 키우는 강아지 견종 다섯 가지를 소개하는 페이지">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fdf8f1;
+    --surface: #ffffff;
+    --text: #3a2e25;
+    --muted: #7a6a5c;
+    --accent: #d9822b;
+    --accent-soft: #fbe7d1;
+    --border: #eadfce;
+    --shadow: 0 6px 20px rgba(90, 60, 30, .08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1d1915;
+      --surface: #29231d;
+      --text: #f3e9dd;
+      --muted: #b8a694;
+      --accent: #f0a050;
+      --accent-soft: #3d2f22;
+      --border: #3b3229;
+      --shadow: 0 6px 20px rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1d1915;
+    --surface: #29231d;
+    --text: #f3e9dd;
+    --muted: #b8a694;
+    --accent: #f0a050;
+    --accent-soft: #3d2f22;
+    --border: #3b3229;
+    --shadow: 0 6px 20px rgba(0, 0, 0, .35);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Gowun Dodum", system-ui, sans-serif;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  h1, h2, h3 { font-family: "Jua", sans-serif; font-weight: 400; line-height: 1.3; }
+
+  header.hero { text-align: center; padding: 64px 0 40px; }
+  .hero .paw { font-size: 64px; }
+  .hero h1 { font-size: clamp(32px, 6vw, 52px); margin: 8px 0; }
+  .hero p { color: var(--muted); font-size: 18px; margin: 0 auto; max-width: 560px; }
+
+  nav.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 28px 0 8px; }
+  nav.chips a {
+    text-decoration: none; color: var(--text);
+    background: var(--accent-soft); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 999px; font-size: 15px;
+  }
+  nav.chips a:hover { border-color: var(--accent); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin: 32px 0; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 20px; padding: 24px; box-shadow: var(--shadow);
+    scroll-margin-top: 16px;
+  }
+  .card .emoji { font-size: 48px; }
+  .card h3 { font-size: 26px; margin: 8px 0 4px; }
+  .card .en { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; padding: 0; list-style: none; }
+  .tags li { background: var(--accent-soft); color: var(--accent); padding: 2px 10px; border-radius: 8px; font-size: 14px; font-weight: 700; }
+  .meta { font-size: 15px; color: var(--muted); margin: 0; }
+  .meta b { color: var(--text); }
+
+  section.tips { margin: 48px 0; }
+  section.tips h2 { font-size: 30px; text-align: center; margin-bottom: 4px; }
+  .note { text-align: center; color: var(--muted); font-size: 14px; margin: 0 0 20px; }
+  .tip-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; padding: 0; list-style: none; }
+  .tip-list li { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+  .tip-list .t { font-family: "Jua", sans-serif; font-size: 20px; display: block; margin-bottom: 4px; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--accent); word-break: break-all; }
+  footer ul { padding-left: 18px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="paw" aria-hidden="true">🐶</div>
+      <h1>강아지 소개</h1>
+      <p>사람과 가장 오래 함께해 온 친구, 강아지!<br>많이 키우는 견종 다섯 가지를 만나 보세요.</p>
+      <nav class="chips" aria-label="견종 바로가기">
+        <a href="#maltese">말티즈</a>
+        <a href="#poodle">푸들</a>
+        <a href="#pomeranian">포메라니안</a>
+        <a href="#golden">골든 리트리버</a>
+        <a href="#shiba">시바견</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="grid">
+        <article class="card" id="maltese">
+          <div class="emoji" aria-hidden="true">🤍</div>
+          <h3>말티즈</h3>
+          <p class="en">Maltese · 소형견</p>
+          <ul class="tags"><li>장난기 많음</li><li>매력적</li><li>적응력 좋음</li></ul>
+          <p class="meta"><b>별명</b> "몰타의 오래된 개(Ye Ancient Dogge of Malta)"</p>
+          <p class="meta">하얗고 긴 털이 특징인 작은 반려견이에요.</p>
+        </article>
+
+        <article class="card" id="poodle">
+          <div class="emoji" aria-hidden="true">🐩</div>
+          <h3>푸들</h3>
+          <p class="en">Poodle · 토이·미니어처·스탠더드</p>
+          <ul class="tags"><li>우아함</li><li>운동 능력</li><li>든든한 동반자</li></ul>
+          <p class="meta"><b>털</b> 곱슬곱슬하고 알레르기를 덜 일으키는 털</p>
+          <p class="meta">크기에 따라 세 종류로 나뉘어요.</p>
+        </article>
+
+        <article class="card" id="pomeranian">
+          <div class="emoji" aria-hidden="true">🧡</div>
+          <h3>포메라니안</h3>
+          <p class="en">Pomeranian · 토이 그룹</p>
+          <ul class="tags"><li>활발함</li><li>사람을 좋아함</li></ul>
+          <p class="meta"><b>특징</b> 세계에서 가장 인기 있는 토이 견종 중 하나</p>
+          <p class="meta">솜뭉치처럼 풍성한 털을 가진 아주 작은 강아지예요.</p>
+        </article>
+
+        <article class="card" id="golden">
+          <div class="emoji" aria-hidden="true">🦮</div>
+          <h3>골든 리트리버</h3>
+          <p class="en">Golden Retriever · 대형견</p>
+          <ul class="tags"><li>명랑함</li><li>삶을 사랑함</li><li>아름다움</li></ul>
+          <p class="meta"><b>원산지</b> 스코틀랜드 (사냥을 돕던 개)</p>
+          <p class="meta">금빛 털과 다정한 성격으로 사랑받아요.</p>
+        </article>
+
+        <article class="card" id="shiba">
+          <div class="emoji" aria-hidden="true">🦊</div>
+          <h3>시바견</h3>
+          <p class="en">Shiba Inu · 중소형견</p>
+          <ul class="tags"><li>씩씩함</li><li>착한 성격</li><li>적응력 좋음</li></ul>
+          <p class="meta"><b>원산지</b> 일본 (아주 오래된 견종)</p>
+          <p class="meta">여우를 닮은 얼굴과 말린 꼬리가 매력이에요.</p>
+        </article>
+      </div>
+
+      <section class="tips" aria-labelledby="tips-title">
+        <h2 id="tips-title">🏠 강아지와 함께 살기</h2>
+        <p class="note">일반적인 반려 상식이에요(공식 미확인). 자세한 건 수의사와 상담하세요.</p>
+        <ul class="tip-list">
+          <li><span class="t">🚶 매일 산책</span>몸도 튼튼해지고 스트레스도 풀려요.</li>
+          <li><span class="t">🍖 알맞은 사료</span>나이와 몸 크기에 맞는 사료를 정해진 양만큼 줘요.</li>
+          <li><span class="t">🩺 정기 검진</span>예방접종과 건강검진을 꾸준히 챙겨요.</li>
+          <li><span class="t">🪮 털 관리</span>빗질과 목욕으로 털과 피부를 깨끗하게 지켜요.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>🐾 AI 에이전트 수업 · Git 연습용 페이지 (2026-10-31)</p>
+      <p><b>출처</b></p>
+      <ul>
+        <li>견종 성격·원산지·특징: 미국애견협회(AKC) 공식 견종 페이지 —
+          <a href="https://www.akc.org/dog-breeds/maltese/">말티즈</a>,
+          <a href="https://www.akc.org/dog-breeds/poodle-toy/">푸들</a>,
+          <a href="https://www.akc.org/dog-breeds/pomeranian/">포메라니안</a>,
+          <a href="https://www.akc.org/dog-breeds/golden-retriever/">골든 리트리버</a>,
+          <a href="https://www.akc.org/dog-breeds/shiba-inu/">시바견</a></li>
+        <li>크기 구분(소형·대형 등)과 "함께 살기" 팁은 일반 상식이에요(공식 미확인).</li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
